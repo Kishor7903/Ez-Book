@@ -8,6 +8,9 @@ import Contact from './pages/Contact-us'
 import store from './store/store'
 import Home from "./pages/Home"
 import About from './pages/About-us.jsx'
+import ServicesHome from "./components/services/Services_Home"
+import FoodServices from './components/services/FoodServices.jsx'
+import SignUp from './pages/SignUp.jsx'
 
 
 const router = createBrowserRouter([{
@@ -15,18 +18,34 @@ const router = createBrowserRouter([{
   element: <App />,
   children: [
     {
-      path: "",
+      path: "/",
       element: <Home />
+    },
+
+    {
+      path: "/services",
+      element: <ServicesHome />
     },
 
     {
       path: "/contact-us",
       element: <Contact />
     },
+
     {
       path: "/about-us",
       element: <About />
+    },
+    
+    {
+      path: "/food-services",
+      element: <FoodServices />
+    },
+    {
+      path:"/sign-up",
+      element: <SignUp />
     }
+
   ]
 }])
 
