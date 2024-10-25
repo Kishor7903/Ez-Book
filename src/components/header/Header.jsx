@@ -5,6 +5,7 @@ import {useSelector} from "react-redux";
 import LogoutBtn from "./LogoutBtn";
 import Container  from "../container/Container.jsx";
 import logo from '../../assets/Logo.jpg'
+import SignUp from "../Signup.jsx"
 
 function Header(){
 
@@ -15,6 +16,11 @@ function Header(){
             name: "Home",
             active: false,
             slug: "/"
+        },
+        {
+            name: "Services",
+            active: true,
+            slug: "/services"
         },
 
         {
@@ -27,6 +33,11 @@ function Header(){
             name: "About us",
             active: true,
             slug: "/about-us",
+        },
+        {
+            name: "Sign up",
+            active: !authStatus,
+            slug: "/sign-up",
         }
     ]
     return(

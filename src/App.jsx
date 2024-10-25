@@ -6,12 +6,15 @@ import { Outlet } from 'react-router-dom'
 
 function App() {
 
-
+console.log(import.meta.env.VITE_APPWRITE_URL);
   return (
     <div className='min-h-screen flex flex-wrap content-between'>
-      <div className='w-full block'>
+      <div className='w-screen'>
         <Header />
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
+        
       </div>
     </div>
 
